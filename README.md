@@ -42,6 +42,8 @@ In order to run our notebook you would need to have the following packages insta
 * pathlib
 * plotly
 
+Link to our [Website](https://vickyli1015.github.io/Handedness-Prediction/)
+
 
 <!-- Task for next week:
 * try analysis on different d resolutions
