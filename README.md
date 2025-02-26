@@ -43,6 +43,7 @@ In order to run our notebook you would need to have the following packages insta
 * plotly
 
 
+
 <!-- Task for next week:
 * try analysis on different d resolutions
 * try combining the subjects by averaging over the time series
