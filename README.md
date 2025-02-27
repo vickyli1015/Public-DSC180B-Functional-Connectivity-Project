@@ -42,30 +42,21 @@ In order to run our notebook you would need to have the following packages insta
 * pathlib
 * plotly
 
+# Setting Up the Conda Environment
 
-import os
+To create a Conda environment using the dependencies listed in `requirements.txt`, follow these steps:
 
-def create_conda_env(env_name, requirements_file):
-    """
-    Creates a conda environment from a requirements.txt file.
-    :param env_name: Name of the conda environment to create
-    :param requirements_file: Path to the requirements.txt file
-    """
-    # Construct the conda create command
-    create_env_command = f"conda create --name {env_name} --yes python"
-    os.system(create_env_command)
-    
-    # Install packages from requirements.txt
-    install_command = f"conda install --name {env_name} --yes --file {requirements_file}"
-    os.system(install_command)
-    
-    print(f"Conda environment '{env_name}' created successfully!")
+## 1. Create and Activate the Environment
 
-if __name__ == "__main__":
-    env_name = "my_env"  # Change this to your desired environment name
-    requirements_file = "requirements.txt"  # Ensure this file exists in the same directory
-    
-    create_conda_env(env_name, requirements_file)
+```sh
+conda create --name my_env --yes python
+conda activate my_env
+
+conda install --name my_env --yes --file requirements.txt
+
+conda list
+
+
 
 
 
