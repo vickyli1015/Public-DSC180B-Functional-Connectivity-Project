@@ -54,10 +54,12 @@ conda activate my_env
 
 ## 2. Install Dependencies
 
+```sh
 conda install --name my_env --yes --file requirements.txt
 
 ## 3. Verify Installation
 
+```sh
 conda list
 
 
