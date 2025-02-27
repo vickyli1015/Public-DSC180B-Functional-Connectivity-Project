@@ -43,6 +43,31 @@ In order to run our notebook you would need to have the following packages insta
 * plotly
 
 
+import os
+
+def create_conda_env(env_name, requirements_file):
+    """
+    Creates a conda environment from a requirements.txt file.
+    :param env_name: Name of the conda environment to create
+    :param requirements_file: Path to the requirements.txt file
+    """
+    # Construct the conda create command
+    create_env_command = f"conda create --name {env_name} --yes python"
+    os.system(create_env_command)
+    
+    # Install packages from requirements.txt
+    install_command = f"conda install --name {env_name} --yes --file {requirements_file}"
+    os.system(install_command)
+    
+    print(f"Conda environment '{env_name}' created successfully!")
+
+if __name__ == "__main__":
+    env_name = "my_env"  # Change this to your desired environment name
+    requirements_file = "requirements.txt"  # Ensure this file exists in the same directory
+    
+    create_conda_env(env_name, requirements_file)
+
+
 
 <!-- Task for next week:
 * try analysis on different d resolutions
