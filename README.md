@@ -52,7 +52,11 @@ To create a Conda environment using the dependencies listed in `requirements.txt
 conda create --name my_env --yes python
 conda activate my_env
 
+## 2. Install Dependencies
+
 conda install --name my_env --yes --file requirements.txt
+
+## 3. Verify Installation
 
 conda list
 
