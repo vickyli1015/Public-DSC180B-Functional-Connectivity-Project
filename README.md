@@ -51,15 +51,15 @@ To create a Conda environment using the dependencies listed in `requirements.txt
 ```sh
 conda create --name my_env --yes python
 conda activate my_env
-
+```
 ## 2. Install Dependencies
 
 ```sh
 conda install --name my_env --yes --file requirements.txt
-
+```
 ## 3. Verify Installation
 
 ```sh
 conda list
-
+```
 
