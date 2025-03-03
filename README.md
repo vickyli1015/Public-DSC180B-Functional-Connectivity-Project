@@ -42,13 +42,24 @@ In order to run our notebook you would need to have the following packages insta
 * pathlib
 * plotly
 
+# Setting Up the Conda Environment
 
+To create a Conda environment using the dependencies listed in `requirements.txt`, follow these steps:
 
-<!-- Task for next week:
-* try analysis on different d resolutions
-* try combining the subjects by averaging over the time series
-* try combingng the subjects by averaging over the datapoints across subjects??? (Not sure abt this one)
-* read the research paper
+## 1. Create and Activate the Environment
 
-Q1 project:
-* map brain connectivity -->
+```sh
+conda create --name my_env --yes python
+conda activate my_env
+```
+## 2. Install Dependencies
+
+```sh
+conda install --name my_env --yes --file requirements.txt
+```
+## 3. Verify Installation
+
+```sh
+conda list
+```
+
