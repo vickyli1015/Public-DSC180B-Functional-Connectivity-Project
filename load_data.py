@@ -69,7 +69,7 @@ def load_unrestricted(file_path=None, username='anmarkova'):
     return data
 
 #load restricted data
-def load_restricted(file_path=None, username='anmarkova':
+def load_restricted(file_path=None, username='anmarkova'):
 
     if not file_path:
         file_path = f"/home/{username}/teams/a05/group_2/RESTRICTED_BEHAVIORAL_DATA.csv"
@@ -94,7 +94,7 @@ def get_labels(atlas_coords):
     brain_region = []
     for atlas_coord in atlas_coords:
         region = read_atlas_peak("harvard_oxford", atlas_coord)
-        print(region)
+        #print(region)
         brain_region += [region]  
     #select the correct region with largest probability given from the library
     brain_region = [
