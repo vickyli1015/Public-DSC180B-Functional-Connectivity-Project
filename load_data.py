@@ -13,7 +13,7 @@ def get_subjects(sub_list):
     return sub_id
 
 #loading the data
-def load_txt(n=100, username='anmarkova', file_path=None):
+def load_txt(n=100, sub_id=None, username='anmarkova', file_path=None):
     '''
     loads txt data of all subjects
 
@@ -30,8 +30,11 @@ def load_txt(n=100, username='anmarkova', file_path=None):
     else:
         file_path = f"/home/{username}/teams/a05/group_2/HCP_PTN1200/node_timeseries/3T_HCP1200_MSMAll_d{n}_ts2"
     sub_list = os.listdir(file_path)
-    sub_id = get_subjects(sub_list)
+    if sub_id is None:
+        sub_id = get_subjects(sub_list)
     make_path = lambda x: file_path + "/" + x
+    sub_list = [i for i in sub_list if int(i.split(".")[0]) in sub_id]
+    sub_id = get_subjects(sub_list)
     paths = [make_path(i) for i in sub_list]
     sub_data = [np.loadtxt(path) for path in paths]
 
