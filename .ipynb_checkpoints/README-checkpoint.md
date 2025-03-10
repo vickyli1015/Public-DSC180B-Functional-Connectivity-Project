@@ -2,17 +2,23 @@
 
 ## Project Structure:
 
-`main.ipynb` is the combination of all of our analysis and exploration of dynamic functional connectivity.
+We all organized our analysis notebooks inside the folder under our name.
 
-`etl.py` contains the function of loading the data, brain labels that correlate with our brain region, and brain image data.
+`load_data.py` contains the function of loading the data, brain labels that correlate with our brain region, and brain image data.
 
-`requirement.txt` contains the non-built-in Python libraries that are used in our project.
+`run.py` contains all of our models and when run on a specific data will print out the model results.
 
-`Previous Explorations` is the folder that contains all the details and steps of our analysis which is sorted by the creator of the analysis.
+`environment.yml` contains the non-built-in Python libraries that are used in our project.
+
+`EDA.ipynb` contains our exploratory work, where you can get familiar with the data and explore on your own.
+
+`project-results` is the folder that contains our notebooks with our code as well as the results of us running that code.
+
+`scratchpad` is the folder that contains all the details and steps of our analysis which is sorted by the creator of the analysis.
 
 `sliding_window_brain` is the folder that contains the interactive plots for each sliding window along with the connections in HTML form. Feel free to play with it!
 
-`images_latex ` is the folder that contains the high-quality images in the final report.
+`images_latex` is the folder that contains the high-quality images in the final report.
 
 `Behavioral Data` is the folder that contains the data we explored and prepared for the next project.
 
@@ -29,6 +35,11 @@ Once you have the data download, you will be able to find the timeseries data in
 In addition, the data we used included a part of restricted data according to HCP, and that specific part of the data requires an application [here](https://www.humanconnectome.org/study/hcp-young-adult/document/wu-minn-hcp-consortium-open-access-data-use-terms). According to the data use terms, we are not allowed to expose the data in public. Therefore, we did not include our data inside our project repo, but after the restricted data application and the data getting steps mentioned above, it will provide all the data we need in this project. 
 
 
+The second part of the data we are using is the time series for two different parcellations (2.58 GB total), and they are all separated into two hemispheres of the brain. The files labeled '*_parcellation-mmp_*' contain the data that divides each hemisphere into 180 regions, which we mentioned as mmp data. The files labeled '*_parcellation-ca_*' contain the data that divides each hemisphere into around 350 regions, which we mentioned as CA data.
+
+Since the dataset is 2.58 GB in total, we can not include it in the repo but can only download from [this link](https://rdl-share.ucsd.edu/message/1lqVOVDRvfs5aSMMuSfgYF) which is provided by our TA Gabriel Riegner.
+
+
 ## Which Packages are necessary?
 In order to run our notebook you would need to have the following packages installed:
 * jupyter notebook
@@ -42,12 +53,11 @@ In order to run our notebook you would need to have the following packages insta
 * pathlib
 * plotly
 
+# Setting Up the Conda Environment
 
-<!-- Task for next week:
-* try analysis on different d resolutions
-* try combining the subjects by averaging over the time series
-* try combingng the subjects by averaging over the datapoints across subjects??? (Not sure abt this one)
-* read the research paper
+To create a Conda environment using the dependencies listed in `requirements.txt`, follow these steps:
 
-Q1 project:
-* map brain connectivity -->
+```sh
+conda env create --name envname --file=environments.yml
+```
+

@@ -4,11 +4,17 @@
 
 We all organized our analysis notebooks inside the folder under our name.
 
-`etl.py` contains the function of loading the data, brain labels that correlate with our brain region, and brain image data.
+`load_data.py` contains the function of loading the data, brain labels that correlate with our brain region, and brain image data.
 
-`requirement.txt` contains the non-built-in Python libraries that are used in our project.
+`run.py` contains all of our models and when run on a specific data will print out the model results.
 
-`Previous Explorations` is the folder that contains all the details and steps of our analysis which is sorted by the creator of the analysis.
+`environment.yml` contains the non-built-in Python libraries that are used in our project.
+
+`EDA.ipynb` contains our exploratory work, where you can get familiar with the data and explore on your own.
+
+`project-results` is the folder that contains our notebooks with our code as well as the results of us running that code.
+
+`scratchpad` is the folder that contains all the details and steps of our analysis which is sorted by the creator of the analysis.
 
 `sliding_window_brain` is the folder that contains the interactive plots for each sliding window along with the connections in HTML form. Feel free to play with it!
 
@@ -51,20 +57,7 @@ In order to run our notebook you would need to have the following packages insta
 
 To create a Conda environment using the dependencies listed in `requirements.txt`, follow these steps:
 
-## 1. Create and Activate the Environment
-
 ```sh
-conda create --name my_env --yes python
-conda activate my_env
-```
-## 2. Install Dependencies
-
-```sh
-conda install --name my_env --yes --file requirements.txt
-```
-## 3. Verify Installation
-
-```sh
-conda list
+conda env create --name envname --file=environments.yml
 ```
 
