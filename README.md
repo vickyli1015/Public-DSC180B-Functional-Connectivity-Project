@@ -24,6 +24,8 @@ We all organized our analysis notebooks inside the folder under our name.
 
 `Behavioral Data` is the folder that contains the data we explored and prepared for the next project.
 
+`data` is the folder that contains the data that we used which can be shown to others.
+
 
 
 ## How to get the data?
