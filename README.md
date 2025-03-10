@@ -2,7 +2,7 @@
 
 ## Project Structure:
 
-`main.ipynb` is the combination of all of our analysis and exploration of dynamic functional connectivity.
+We all organized our analysis notebooks inside the folder under our name.
 
 `etl.py` contains the function of loading the data, brain labels that correlate with our brain region, and brain image data.
 
