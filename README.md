@@ -6,6 +6,8 @@ We all organized our analysis notebooks inside the folder under our name.
 
 `load_data.py` contains the function of loading the data, brain labels that correlate with our brain region, and brain image data.
 
+`feature-extraction.py` contains the method and process that we used to get our features.
+
 `run.py` contains all of our models and when run on a specific data will print out the model results.
 
 `environment.yml` contains the non-built-in Python libraries that are used in our project.
