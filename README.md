@@ -12,7 +12,7 @@
 
 `sliding_window_brain` is the folder that contains the interactive plots for each sliding window along with the connections in HTML form. Feel free to play with it!
 
-`images_latex ` is the folder that contains the high-quality images in the final report.
+`images_latex` is the folder that contains the high-quality images in the final report.
 
 `Behavioral Data` is the folder that contains the data we explored and prepared for the next project.
 
